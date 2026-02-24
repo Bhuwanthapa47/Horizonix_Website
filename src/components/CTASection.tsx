@@ -19,7 +19,7 @@ const CTASection = () => {
             <a href="#contact">Book Free Consultation <ArrowRight size={18} className="ml-1" /></a>
           </Button>
           <Button variant="heroOutline" size="lg" asChild>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            <a href="https://wa.me/919855738747" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
           </Button>
         </div>
       </div>

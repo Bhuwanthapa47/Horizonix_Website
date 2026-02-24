@@ -7,12 +7,14 @@ const projects = [
     category: "Business Website",
     desc: "A clean, trust-building website for a Chartered Accountancy practice with service pages, team bios, and contact forms.",
     gradient: "from-primary to-accent",
+    url: "https://www.camonk.com/", // Replace with actual project URL
   },
   {
     title: "StartupFlow — Landing Page",
     category: "Landing Page",
     desc: "A conversion-focused landing page for an early-stage SaaS startup with hero, features, and pricing sections.",
     gradient: "from-accent to-purple-600",
+    url: "https://hintro.ai/", // Replace with actual project URL
   },
 ];
 
@@ -35,9 +37,11 @@ const PortfolioSection = () => {
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{p.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.desc}</p>
-                <Button variant="outline" size="sm">
-                  View Project <ExternalLink size={14} className="ml-1" />
-                </Button>
+                <a href={p.url} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm">
+                    View Project <ExternalLink size={14} className="ml-1" />
+                  </Button>
+                </a>
               </div>
             </div>
           ))}

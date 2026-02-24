@@ -4,21 +4,21 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "₹9,999",
+    price: "₹999",
     desc: "Perfect for a simple online presence.",
     features: ["Single-page website", "Mobile responsive", "Contact form", "Basic SEO", "1 revision round"],
     popular: false,
   },
   {
     name: "Pro",
-    price: "₹19,999",
+    price: "₹1,999",
     desc: "Most popular for growing businesses.",
     features: ["Up to 5 pages", "Custom design", "WhatsApp integration", "Advanced SEO", "3 revision rounds", "1 month support"],
     popular: true,
   },
   {
     name: "Premium",
-    price: "₹29,999",
+    price: "₹3,999",
     desc: "Full-featured solution for serious growth.",
     features: ["Up to 10 pages", "Premium design", "Blog / testimonials", "Analytics setup", "Unlimited revisions", "3 months support"],
     popular: false,

@@ -3,13 +3,50 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    
+    // Replace with your Web3Forms Access Key from https://web3forms.com/
+    formData.append("access_key", "90d6882c-b3e8-45fd-8928-524fb3518cb2");
+    formData.append("subject", "New Contact Form Submission from Horizonix Website");
+    formData.append("from_name", "Horizonix Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+      } else {
+        throw new Error(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -31,20 +68,51 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Hidden field for your email - where you'll receive messages */}
+                <input type="hidden" name="redirect" value="false" />
+                <input type="hidden" name="email" value="horizonix.solutions@gmail.com" />
+                
                 <div>
-                  <Input placeholder="Your Name" required className="bg-secondary border-border" />
+                  <Input 
+                    name="name"
+                    placeholder="Your Name" 
+                    required 
+                    className="bg-secondary border-border" 
+                  />
                 </div>
                 <div>
-                  <Input type="email" placeholder="Your Email" required className="bg-secondary border-border" />
+                  <Input 
+                    type="email" 
+                    name="customer_email"
+                    placeholder="Your Email" 
+                    required 
+                    className="bg-secondary border-border" 
+                  />
                 </div>
                 <div>
-                  <Input placeholder="Your Business / Firm Name" className="bg-secondary border-border" />
+                  <Input 
+                    name="business_name"
+                    placeholder="Your Business / Firm Name" 
+                    className="bg-secondary border-border" 
+                  />
                 </div>
                 <div>
-                  <Textarea placeholder="Tell us about your project..." rows={4} required className="bg-secondary border-border resize-none" />
+                  <Textarea 
+                    name="message"
+                    placeholder="Tell us about your project..." 
+                    rows={4} 
+                    required 
+                    className="bg-secondary border-border resize-none" 
+                  />
                 </div>
-                <Button variant="hero" size="lg" type="submit" className="w-full">
-                  Send Message
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  type="submit" 
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             )}
@@ -58,7 +126,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">Email</p>
-                <p className="text-muted-foreground text-sm">hello@horizonix.solutions</p>
+                <p className="text-muted-foreground text-sm">horizonix.solutions@gmail.com</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -67,7 +135,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">WhatsApp</p>
-                <p className="text-muted-foreground text-sm">+91 99999 99999</p>
+                <p className="text-muted-foreground text-sm">+91 9855738747</p>
               </div>
             </div>
             <div className="flex gap-4">
