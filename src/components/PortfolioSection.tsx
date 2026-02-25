@@ -3,18 +3,25 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "CA Firm — Professional Website",
+    title: "CA Firm — Sharma & Asociates",
     category: "Business Website",
     desc: "A clean, trust-building website for a Chartered Accountancy practice with service pages, team bios, and contact forms.",
-    gradient: "from-primary to-accent",
-    url: "https://www.camonk.com/", // Replace with actual project URL
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+    url: "https://699ea6456d417eca953f7e8e--gregarious-pothos-2ebf44.netlify.app/",
   },
   {
-    title: "StartupFlow — Landing Page",
+    title: "CA Firm — CA Associates",
+    category: "Business Website",
+    desc: "A clean, trust-building website for a Chartered Accountancy practice with service pages, team bios, and contact forms.",
+    image: "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=800&h=600&fit=crop",
+    url: "https://699eaa89c59d970457e00fce--gentle-starburst-492496.netlify.app/",
+  },
+  {
+    title: "Portfolio — Landing Page",
     category: "Landing Page",
     desc: "A conversion-focused landing page for an early-stage SaaS startup with hero, features, and pricing sections.",
-    gradient: "from-accent to-purple-600",
-    url: "https://hintro.ai/", // Replace with actual project URL
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    url: "https://bhuwanthapa.netlify.app/",
   },
 ];
 
@@ -28,11 +35,20 @@ const PortfolioSection = () => {
           <p className="text-muted-foreground">Real results for real businesses. Here's a glimpse of what we build.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projects.map((p, i) => (
             <div key={i} className="card-hover bg-card border border-border rounded-2xl overflow-hidden group">
-              <div className={`h-48 bg-gradient-to-br ${p.gradient} flex items-center justify-center`}>
-                <span className="font-display text-white/80 text-lg font-semibold tracking-wide">{p.category}</span>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={p.image} 
+                  alt={p.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="inline-block px-3 py-1 bg-background/90 backdrop-blur-sm text-xs font-semibold text-foreground rounded-full border border-border">
+                    {p.category}
+                  </span>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{p.title}</h3>
