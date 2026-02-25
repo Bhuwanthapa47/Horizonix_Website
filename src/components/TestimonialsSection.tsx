@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rajesh Sharma",
+    name: "CA Rajesh Sharma",
     role: "Chartered Accountant",
     text: "Horizonix delivered our firm's website in just 4 days. The design is clean, professional, and our clients love it.",
   },

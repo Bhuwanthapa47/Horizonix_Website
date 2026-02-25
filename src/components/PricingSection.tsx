@@ -47,7 +47,7 @@ const PricingSection = () => {
               <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
               <div className="mb-6">
                 <span className="font-display text-4xl font-bold text-foreground">{p.price}</span>
-                <span className="text-muted-foreground text-sm ml-1">one-time</span>
+                <span className="text-muted-foreground text-sm ml-1">per month</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {p.features.map((f, j) => (

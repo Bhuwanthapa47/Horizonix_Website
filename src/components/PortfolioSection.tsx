@@ -5,14 +5,14 @@ const projects = [
   {
     title: "CA Firm — Sharma & Asociates",
     category: "Business Website",
-    desc: "A clean, trust-building website for a Chartered Accountancy practice with service pages, team bios, and contact forms.",
+    desc: "A clean, trust-building website for a Chartered Accountancy Firms with service pages, team bios, and contact forms.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
     url: "https://699ea6456d417eca953f7e8e--gregarious-pothos-2ebf44.netlify.app/",
   },
   {
     title: "CA Firm — CA Associates",
     category: "Business Website",
-    desc: "A clean, trust-building website for a Chartered Accountancy practice with service pages, team bios, and contact forms.",
+    desc: "A clean, trust-building website for a Chartered Accountancy Firms with service pages, team bios, and contact forms.",
     image: "https://images.unsplash.com/photo-1551135049-8a33b5883817?w=800&h=600&fit=crop",
     url: "https://699eaa89c59d970457e00fce--gentle-starburst-492496.netlify.app/",
   },
