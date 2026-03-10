@@ -3,7 +3,7 @@ import { Zap, IndianRupee, Smartphone, Heart, Target, Headphones } from "lucide-
 const reasons = [
   { icon: Zap, title: "Fast Delivery", desc: "Your website ready in 3–5 business days. No delays." },
   { icon: IndianRupee, title: "Affordable Pricing", desc: "Premium quality at prices built for small businesses." },
-  { icon: Target, title: "Niche Expertise", desc: "Designs tailored specifically for CA firms and professionals." },
+  { icon: Target, title: "Industry Expertise", desc: "Designs tailored for your industry — from e-commerce to services." },
   { icon: Smartphone, title: "Mobile-First", desc: "Every site is fully responsive and optimised for mobile." },
   { icon: Headphones, title: "Personal Support", desc: "Direct communication — no tickets, no waiting." },
   { icon: Heart, title: "Built with Care", desc: "We treat every project like our own brand." },

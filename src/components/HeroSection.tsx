@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-hero-muted max-w-xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-            We design stunning, conversion-focused websites for CA firms, startups, and local businesses — delivered in 3–5 days.
+            We design stunning, conversion-focused websites for startups, agencies, and businesses of all sizes — delivered in 3–5 days.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.5s" }}>

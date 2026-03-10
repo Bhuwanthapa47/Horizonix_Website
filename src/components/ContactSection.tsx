@@ -92,7 +92,7 @@ const ContactSection = () => {
                 <div>
                   <Input 
                     name="business_name"
-                    placeholder="Your Business / Firm Name" 
+                    placeholder="Your Business Name" 
                     className="bg-secondary border-border" 
                   />
                 </div>

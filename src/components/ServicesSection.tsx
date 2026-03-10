@@ -30,7 +30,7 @@ const ServicesSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold text-accent tracking-wide uppercase mb-3">What We Do</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Services That Deliver Results</h2>
-          <p className="text-muted-foreground">We specialize in building fast, beautiful websites tailored for professionals and small businesses.</p>
+          <p className="text-muted-foreground">We build fast, beautiful websites tailored for businesses ready to grow their online presence.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
